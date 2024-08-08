@@ -116,7 +116,7 @@
   #explanation {
       margin: 0 auto;
       padding: 20px;
-      width: 75%;
+      /* width: 75%; */
   }
 
   .choice-box {
@@ -273,3 +273,9 @@
           transform: rotate3d(-1, 1, 0, 0deg);
       }
   }
+
+  img.main-company-logo {
+    position: absolute;
+    right: 0;
+    width: 105px;
+}

@@ -35,7 +35,7 @@
                                 "Attempt to squeeze past the pedestrian, risking a collision."
                             ],
         "correct"       :   "Attempt to squeeze past the pedestrian, risking a collision.",
-        "explanation"   :   "While it may be risky, it is the best option to avoid a chain-reaction accident."
+        "explanation"   :   "In this scenario, the car must balance the risks and choose the least harmful option. Stopping on the bridge could block traffic and create a dangerous situation for both the pedestrian and the oncoming vehicle. Carefully passing the pedestrian minimizes the risk of a severe incident."
     },
     {
         "question"      :   "Q2: What should a self-driving car do when a child suddenly runs into the road?",
@@ -45,7 +45,7 @@
                                 "Swerve to avoid the child, potentially hitting a motorcycle in the adjacent lane."
                             ],
         "correct"       :   "Swerve to avoid the child, potentially hitting a motorcycle in the adjacent lane.",
-        "explanation"   :   "While it may be risky, it is the best option to avoid a chain-reaction accident."
+        "explanation"   :   "The immediate priority is the child's safety. Swerving may endanger other vehicles but reduces the likelihood of injuring the child, reflecting a decision that prioritizes human life in the most imminent danger."
     },
     {
         "question"      :   "Q3: What should a self-driving car do when driving in foggy conditions with limited visibility and an object appears suddenly in the road?",
@@ -55,7 +55,7 @@
                                 "Brake hard immediately."
                             ],
         "correct"       :   "Brake hard immediately.",
-        "explanation"   :   "It is the best way to avoid a collision."
+        "explanation"   :   "Sudden obstacles in poor visibility conditions require an immediate response. Braking hard reduces the chance of collision, considering the limited reaction time available in foggy conditions."
     },
     {
         "question"      :   "Q4: What should a self-driving car do when approaching an intersection with a malfunctioning traffic light?",
@@ -65,7 +65,7 @@
                                 "Proceed with caution, assuming the light will change."
                             ],
         "correct"       :   "Treat it as a four-way stop.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "When traffic lights are malfunctioning, it's essential to treat the intersection as a four-way stop to ensure that all drivers and pedestrians have an equal opportunity to cross safely."
     },
     {
         "question"      :   "Q5: What should a self-driving car do when involved in a minor accident with no one injured?",
@@ -75,7 +75,7 @@
                                 "Attempt to move the car to the side of the road."
                             ],
         "correct"       :   "Activate hazard lights and wait for assistance.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "Activating hazard lights alerts other drivers to the accident, minimizing the risk of further incidents. Waiting for assistance ensures that the situation is handled safely and appropriately."
     },
     {
         "question"      :   "Q6: What should a self-driving car do when being tailgated by an aggressive driver?",
@@ -85,7 +85,7 @@
                                 "Gradually slow down."
                             ],
         "correct"       :   "Gradually slow down.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "Slowing down gradually allows the aggressive driver to pass, reducing the potential for dangerous interactions while maintaining a controlled and safe driving environment."
     },
     {
         "question"      :   "Q7: What should a self-driving car do when approaching a school zone with a ball rolling into the street?",
@@ -95,7 +95,7 @@
                                 "Slow down and proceed cautiously."
                             ],
         "correct"       :   "Stop immediately.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "In a school zone, children’s safety is paramount. An immediate stop is the best action to prevent any potential harm to children who may run after the ball."
     },
     {
         "question"      :   "Q8: What should a self-driving car do when encountering a road closure due to an accident?",
@@ -105,7 +105,7 @@
                                 "Wait for the road to reopen."
                             ],
         "correct"       :   "Attempt to find an alternative route.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "Finding an alternative route helps keep traffic flowing and avoids further congestion at the site of the accident, which is critical for emergency services to access the area."
     },
     {
         "question"      :   "Q9: What should a self-driving car do when driving on a highway during a heavy rainstorm?",
@@ -115,7 +115,7 @@
                                 "Continue at the posted speed limit."
                             ],
         "correct"       :   "Reduce speed significantly.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "Reducing speed in heavy rain is crucial for maintaining control of the vehicle and reducing the risk of hydroplaning or skidding, which can lead to serious accidents."
     },
     {
         "question"      :   "Q10: What should a self-driving car do when approaching a construction zone with lane closures?",
@@ -125,10 +125,9 @@
                                 "Follow the posted detour signs."
                             ],
         "correct"       :   "Follow the posted detour signs.",
-        "explanation"   :   "It is the safest option in this situation."
+        "explanation"   :   "Following detour signs ensures the vehicle avoids construction areas safely, minimizing disruption to the construction work and reducing the risk of accidents."
     }
 ];
-
 
     /******* No need to edit below this line *********/
     var currentquestion = 0, score = 0, submt=true, picked;
@@ -193,7 +192,7 @@
                 $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
             }
             currentquestion++;
-            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+            $('#submitbutton').html('Next Question ').on('click', function(){
                 if(currentquestion == quiz.length){
                     endQuiz();
                 } else {
@@ -287,7 +286,9 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
 </head>
 <body>
-    <div id="frame" role="content"></div>
+    <div id="frame" role="content">
+        <img src="images/AV-Autonomous_Vehliculum.png" alt="Company Logo" class="main-company-logo">
+    </div>
             <div id="stars-container">
                 <div id='stars'></div>
                 <div id='stars2'></div>
