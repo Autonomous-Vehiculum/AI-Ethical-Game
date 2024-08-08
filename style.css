@@ -127,3 +127,7 @@
       -moz-border-radius: 5px;
       border-radius: 5px;
   }
+
+  li.choice.choice-box:hover, li.choice.choice-box:active  {
+    background: #34bce417 !important;
+}
